@@ -1,8 +1,8 @@
 # Lake Norman Cybercab
 
-A personal advocacy page for Lake Norman, North Carolina. Residents and visitors can show interest in autonomous robotaxi service around the lake.
+A personal plan to buy a Cybercab or two and run a small autonomous fleet around Lake Norman.
 
-This is not a product, not a booking site, and not affiliated with Tesla, Inc. or any Tesla product.
+Not Tesla. Not a ride app.
 
 ## Live
 
@@ -53,21 +53,3 @@ DNS (Cloudflare or the registrar), when you are ready to cut over. Apex can be t
 | CNAME | `www` | `chadakeith.github.io` |
 
 `www` should be a CNAME to `chadakeith.github.io`, not to the project path. Do not add a wildcard.
-
-## Interest form
-
-Day one, the form opens a prefilled email to `chadakeith@gmail.com`. That works with no account setup. The address is only the mailbox for local interest notes.
-
-To switch to [Formspree](https://formspree.io):
-
-1. Create a form and copy the id from the endpoint `https://formspree.io/f/xxxxxxxx`.
-2. In `js/main.js`, set the placeholder:
-
-```js
-// TODO(chad): paste your Formspree form id here. Leave "" for mailto.
-const FORMSPREE_ID = "";
-```
-
-3. Commit to `main`. The form then posts to Formspree and falls back to the same mailto link if that request fails.
-
-No backend ships with this repo. Do not put a fake endpoint in `FORMSPREE_ID`.

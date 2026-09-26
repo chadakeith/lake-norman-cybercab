@@ -1,2 +1,73 @@
-# lake-norman-cybercab
-Lake Norman CyberCab — personal advocacy site (want Cybercab in Lake Norman). Not Tesla-affiliated.
+# Lake Norman Cybercab
+
+A personal advocacy page for Lake Norman, North Carolina. Residents and visitors can show interest in autonomous robotaxi service around the lake.
+
+This is not a product, not a booking site, and not affiliated with Tesla, Inc. or any Tesla product.
+
+## Live
+
+- Project preview: https://chadakeith.github.io/lake-norman-cybercab/
+- Canonical (after DNS): https://lakenormancybercab.com/
+
+`CNAME` on `main` is `lakenormancybercab.com`. Canonical, Open Graph, `robots.txt`, and `sitemap.xml` already use that host. The plural domain `lakenormancybercabs.com` is a later Cloudflare 301 and is not configured in this repo.
+
+Until DNS points at GitHub Pages, use the github.io preview. If GitHub starts redirecting github.io to the custom domain before DNS exists, the preview will not load until the records below are in place.
+
+## Stack
+
+Static HTML, CSS, and a little JS. GitHub Pages from `main` via `.github/workflows/pages.yml`.
+
+## Local preview
+
+```bash
+python3 -m http.server 8080
+```
+
+Open http://127.0.0.1:8080/
+
+## GitHub Pages
+
+The workflow deploys on every push to `main` and can also be run by hand (`workflow_dispatch`). It requests Pages enablement.
+
+If the first deploy does not start, one click:
+
+1. Open [Settings → Pages](https://github.com/chadakeith/lake-norman-cybercab/settings/pages)
+2. Build and deployment → Source → **GitHub Actions**
+3. Actions → **Deploy Pages** → Run workflow
+
+## Custom domain
+
+After the Pages site exists:
+
+1. Settings → Pages → Custom domain → `lakenormancybercab.com` → Save
+2. Leave **Enforce HTTPS** on after the certificate issues
+
+DNS (Cloudflare or the registrar), when you are ready to cut over. Apex can be the four GitHub Pages A records, or a flattened CNAME to `chadakeith.github.io`. Start grey-cloud (DNS only) until the GitHub certificate issues.
+
+| Type | Host | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `chadakeith.github.io` |
+
+`www` should be a CNAME to `chadakeith.github.io`, not to the project path. Do not add a wildcard.
+
+## Interest form
+
+Day one, the form opens a prefilled email to `chadakeith@gmail.com`. That works with no account setup. The address is only the mailbox for local interest notes.
+
+To switch to [Formspree](https://formspree.io):
+
+1. Create a form and copy the id from the endpoint `https://formspree.io/f/xxxxxxxx`.
+2. In `js/main.js`, set the placeholder:
+
+```js
+// TODO(chad): paste your Formspree form id here. Leave "" for mailto.
+const FORMSPREE_ID = "";
+```
+
+3. Commit to `main`. The form then posts to Formspree and falls back to the same mailto link if that request fails.
+
+No backend ships with this repo. Do not put a fake endpoint in `FORMSPREE_ID`.

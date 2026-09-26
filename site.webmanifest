@@ -1,0 +1,19 @@
+{
+  "name": "Lake Norman Cybercab",
+  "short_name": "LN Cybercab",
+  "description": "A local page asking for autonomous robotaxi service on Lake Norman, North Carolina.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#090a0b",
+  "theme_color": "#090a0b",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

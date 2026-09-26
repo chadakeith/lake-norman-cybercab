@@ -23,16 +23,36 @@
     />
     <meta property="og:url" content="https://lakenormancybercab.com/" />
     <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:image"
+      content="https://chadakeith.github.io/lake-norman-cybercab/images/og-cybercab.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Front view of a Cybercab at night, a low two-seat robotaxi with a light bar and a glass canopy."
+    />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lake Norman Cybercab — Want autonomous rides on the lake" />
     <meta
       name="twitter:description"
       content="Residents and visitors asking for Cybercab robotaxi service on Lake Norman. Show your interest. Not a booking site."
     />
+    <meta
+      name="twitter:image"
+      content="https://chadakeith.github.io/lake-norman-cybercab/images/og-cybercab.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Front view of a Cybercab at night, a low two-seat robotaxi with a light bar and a glass canopy."
+    />
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" as="image" href="images/cybercab-front.webp" type="image/webp" fetchpriority="high" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,6 +83,7 @@
       </a>
       <nav class="site-nav" aria-label="Page">
         <a href="#why">Why here</a>
+        <a href="#vehicle">The vehicle</a>
         <a href="#interest">Show interest</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -90,53 +111,95 @@
         </div>
 
         <figure class="hero-art">
-          <svg viewBox="0 0 800 560" role="img" aria-labelledby="art-title art-desc">
-            <title id="art-title">Abstract lake horizon with a generic rounded shuttle</title>
-            <desc id="art-desc">
-              Original geometric artwork: a dusk sky, a still lake, and a low rounded
-              vehicle shape. Not a depiction of any production car.
-            </desc>
-            <defs>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#101418" />
-                <stop offset="62%" stop-color="#1c2a2c" />
-                <stop offset="100%" stop-color="#10181a" />
-              </linearGradient>
-              <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#173436" />
-                <stop offset="40%" stop-color="#0d1a1c" />
-                <stop offset="100%" stop-color="#090c0d" />
-              </linearGradient>
-              <radialGradient id="glow" cx="62%" cy="38%" r="42%">
-                <stop offset="0%" stop-color="#e7f6f2" stop-opacity="0.34" />
-                <stop offset="68%" stop-color="#e7f6f2" stop-opacity="0" />
-              </radialGradient>
-              <linearGradient id="pod" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#f7f4ee" />
-                <stop offset="100%" stop-color="#cfc8bb" />
-              </linearGradient>
-            </defs>
-            <rect width="800" height="560" fill="url(#sky)" />
-            <circle cx="500" cy="210" r="180" fill="url(#glow)" />
-            <path d="M0 300h800v260H0z" fill="url(#water)" />
-            <path d="M0 300h800" stroke="#9adbd4" stroke-opacity="0.7" stroke-width="1.25" />
-            <path d="M40 338c120 16 190 14 300-2s180-16 420 8" fill="none" stroke="#f3f0e8" stroke-opacity="0.16" />
-            <path d="M20 378c150 14 230 6 340-10s200-12 420 14" fill="none" stroke="#9adbd4" stroke-opacity="0.28" />
-            <path d="M30 430c160 12 250 2 360-12s190-8 380 16" fill="none" stroke="#f3f0e8" stroke-opacity="0.1" />
-            <path d="M250 470h300l48 70H202z" fill="#0c1011" opacity="0.9" />
-            <g>
-              <rect x="292" y="392" width="250" height="42" rx="21" fill="url(#pod)" />
-              <rect x="348" y="360" width="138" height="48" rx="20" fill="url(#pod)" />
-              <path d="M366 376h102c8 0 14 5 16 12h-134c2-7 8-12 16-12z" fill="#1b2628" />
-              <rect x="308" y="406" width="26" height="3" rx="1.5" fill="#1b2628" opacity="0.4" />
-              <rect x="500" y="406" width="26" height="3" rx="1.5" fill="#7dccc4" />
-              <ellipse cx="338" cy="434" rx="15" ry="6.5" fill="#161817" />
-              <ellipse cx="496" cy="434" rx="15" ry="6.5" fill="#161817" />
-            </g>
-            <path d="M330 492c46 8 100 8 150 0" fill="none" stroke="#9adbd4" stroke-opacity="0.35" />
-          </svg>
-          <figcaption>An original sketch. A wish for the lake, not a product shot.</figcaption>
+          <img
+            src="images/cybercab-front.webp"
+            width="1600"
+            height="1356"
+            alt="Front view of a silver Cybercab at night, with a light bar across the nose and a broad glass canopy."
+            fetchpriority="high"
+            decoding="async"
+          />
+          <figcaption>
+            Photo:
+            <a href="https://commons.wikimedia.org/wiki/File:Front_of_the_Tesla_Cybercab.jpg">Steve Jurvetson</a>
+            /
+            <a href="https://creativecommons.org/licenses/by/2.0/" rel="license">CC BY 2.0</a>
+          </figcaption>
         </figure>
+      </section>
+
+      <section class="vehicle" id="vehicle" aria-labelledby="vehicle-title">
+        <div class="section-intro">
+          <p class="kicker">The vehicle</p>
+          <h2 id="vehicle-title">Photographs of the Cybercab.</h2>
+          <p class="section-note">
+            Side, rear, and cabin. Independent photographs of the robotaxi residents are
+            asking about, published here with credit.
+          </p>
+        </div>
+        <ul class="photo-strip">
+          <li>
+            <figure>
+              <img
+                src="images/cybercab-oblique.webp"
+                width="1400"
+                height="1050"
+                alt="Three-quarter view of a silver Cybercab parked outdoors, with a broad glass canopy and a smooth body."
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                Photo:
+                <a href="https://commons.wikimedia.org/wiki/File:Tesla_Cybercab_at_Santana_Row_oblique_view_dllu.jpg">Dllu</a>
+                /
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>
+                (ShareAlike)
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/cybercab-rear.webp"
+                width="1400"
+                height="1168"
+                alt="Rear view of a silver Cybercab, with a full-width light bar across the back."
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                Photo:
+                <a href="https://commons.wikimedia.org/wiki/File:Rear_of_the_Tesla_Cybercab.jpg">Steve Jurvetson</a>
+                /
+                <a href="https://creativecommons.org/licenses/by/2.0/" rel="license">CC BY 2.0</a>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/cybercab-interior.webp"
+                width="1400"
+                height="1050"
+                alt="Cabin of a Cybercab, with two light-colored seats, no steering wheel, and a wide screen across the front."
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                Photo:
+                <a href="https://commons.wikimedia.org/wiki/File:Inside_the_Tesla_Cybercab.jpg">Steve Jurvetson</a>
+                /
+                <a href="https://creativecommons.org/licenses/by/2.0/" rel="license">CC BY 2.0</a>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <p class="photo-license">
+          ShareAlike applies to the Dllu photograph: adaptations of that image stay under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>.
+          The Jurvetson photographs are
+          <a href="https://creativecommons.org/licenses/by/2.0/" rel="license">CC BY 2.0</a>.
+        </p>
       </section>
 
       <section class="why" id="why" aria-labelledby="why-title">

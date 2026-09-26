@@ -27,13 +27,13 @@ Open http://127.0.0.1:8080/
 
 ## GitHub Pages
 
-The workflow deploys on every push to `main` and can also be run by hand (`workflow_dispatch`). It requests Pages enablement.
+The workflow deploys on every push to `main` and can also be run by hand (`workflow_dispatch`).
 
-If the first deploy does not start, one click:
+This repo’s automation token cannot create the Pages site (`Resource not accessible by integration` on the Pages API). The first **Deploy Pages** run on `main` fails at “Configure Pages” until the source is chosen by hand. One click:
 
 1. Open [Settings → Pages](https://github.com/chadakeith/lake-norman-cybercab/settings/pages)
 2. Build and deployment → Source → **GitHub Actions**
-3. Actions → **Deploy Pages** → Run workflow
+3. Actions → **Deploy Pages** → **Run workflow** (or re-run the failed job). The next run can publish. Saving the GitHub Actions source does not deploy by itself.
 
 ## Custom domain
 

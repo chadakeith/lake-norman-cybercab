@@ -1,7 +1,7 @@
 {
   "name": "Lake Norman Cybercab",
   "short_name": "LN Cybercab",
-  "description": "A Lake Norman project to buy Cybercabs and run a small autonomous fleet locally. Not a booking site. Not affiliated with Tesla.",
+  "description": "A personal plan to buy a Cybercab or two and run a small autonomous fleet around Lake Norman. Not Tesla. Not a ride app.",
   "start_url": "./",
   "scope": "./",
   "display": "browser",

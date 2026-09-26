@@ -1,8 +1,8 @@
 # Lake Norman Cybercab
 
-A personal project to buy a Cybercab or two and run a small autonomous fleet on Lake Norman, North Carolina.
+A personal plan to buy a Cybercab or two and run a small autonomous fleet around Lake Norman.
 
-This is not a booking site, and it is not affiliated with Tesla, Inc. or any Tesla product.
+Not Tesla. Not a ride app.
 
 ## Live
 

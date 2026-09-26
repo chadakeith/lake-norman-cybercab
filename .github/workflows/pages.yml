@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -a 404.html index.html robots.txt site.webmanifest sitemap.xml favicon.svg CNAME .nojekyll _site/
-          cp -a css js _site/
+          cp -a css js images _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -255,19 +255,70 @@ h3 {
   margin: 0;
 }
 
-.hero-art svg {
+.hero-art img,
+.photo-strip img {
   width: 100%;
   height: auto;
-  border-radius: 1.5rem;
+  background: #101214;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  object-fit: cover;
 }
 
-.hero-art figcaption {
-  margin-top: 0.75rem;
+.hero-art img {
+  border-radius: 1.5rem;
+  aspect-ratio: 1600 / 1356;
+}
+
+.hero-art figcaption,
+.photo-strip figcaption {
+  margin-top: 0.7rem;
   color: var(--faint);
   font-size: 0.82rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+}
+
+.hero-art figcaption a,
+.photo-strip figcaption a,
+.photo-license a {
+  color: var(--muted);
+}
+
+.vehicle {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.section-note {
+  max-width: 38rem;
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+}
+
+.photo-strip {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.photo-strip figure {
+  margin: 0;
+}
+
+.photo-strip img {
+  border-radius: 1rem;
+  aspect-ratio: 4 / 3;
+}
+
+.photo-license {
+  max-width: 42rem;
+  margin: 1.35rem 0 0;
+  color: var(--faint);
+  font-size: 0.88rem;
 }
 
 .why,
@@ -544,6 +595,7 @@ textarea:focus-visible {
   .hero,
   .interest,
   .reasons,
+  .photo-strip,
   .site-footer {
     grid-template-columns: 1fr;
   }

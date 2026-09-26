@@ -1,7 +1,7 @@
 {
   "name": "Lake Norman Cybercab",
   "short_name": "LN Cybercab",
-  "description": "A local page asking for autonomous robotaxi service on Lake Norman, North Carolina.",
+  "description": "A Lake Norman project to buy Cybercabs and run a small autonomous fleet locally. Not a booking site. Not affiliated with Tesla.",
   "start_url": "./",
   "scope": "./",
   "display": "browser",
